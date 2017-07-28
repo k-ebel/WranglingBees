@@ -429,32 +429,7 @@ for (rw in 1:nrow(datapoints)) {  #2661
 #1167353 obs of 9 variables
 
 #unlisting u_metrics as it populated as a list of single element lists
-dat$u_metric=unlist(dat$u_metric, recursive=FALSE)
-
-
-
-
-
-
-
-# for (rw in 1:nrow(datapoints)) {
-#   print(paste0('rw = ',rw))
-#   for (dp in 1:length(datapoints[[rw,'datapoints']]))
-#     print(paste0('dp = ',dp))
-# }
-
-
-#started running first 10 rows at 1:20pm. Ended 1:32pm.
-#ran through row 100.  counter ended at 56324.
-#ran through row 102. counter ended at 56552
-#started running at 9:11pm
-#at 10:30pm, populating goal 312 of 2833
-#at 7:12am, populating goal 1938 of 2833
-#at 8:49, populating goal 2141 of 2833
-#at 10:15 populating goal 2305 of 2833
-#errored at goal2529 of 2833. counter 1091726
-#started agaim ar 11:43
-#at 12:35pm populating 2790</code></pre>
+dat$u_metric=unlist(dat$u_metric, recursive=FALSE)</code></pre>
 <p>Once I’ve done this, I do some more processing on the data frame I’ve created. Some of the things that come to mind as needing done are : convert measurements into single unit. Identify and deal with outliers and measurement errors.</p>
 <p>For measurements, I decide to go with US vs metric, as those are more intuitive to me.</p>
 <pre class="r"><code>#clearing out environment
